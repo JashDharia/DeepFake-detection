@@ -67,8 +67,3 @@ We experimented with various **CNN architectures** (AlexNet, LeNet, ResNet), tra
 
 Our model must **learn deepfake artifacts** 🔍 rather than just generic image features. Although our model works as an early-stage **filter** for content moderation, testing it on **real-world data** from social media platforms is necessary to enhance generalization. 🌐
 
-## ⚙️ Setup
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-repo/Deepfake-Detection.git
