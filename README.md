@@ -62,6 +62,13 @@ We experimented with various **CNN architectures** (AlexNet, LeNet, ResNet), tra
 
 - **ResNet**:
   - Surprisingly, **46% accuracy** despite the high parameter count. This underperformance could be due to insufficient training data and epochs. 🤷‍♂️
+![180d1d42-ee03-47a0-8784-9c2b956871ae](https://github.com/user-attachments/assets/65243cc0-7583-4296-b572-8d7adf8a7f86)
+
+![858ddd91-6200-44c1-9c9c-2aae9d7c06da](https://github.com/user-attachments/assets/b1c52584-2a41-4d7f-b862-c4db49d066a3)
+
+
+![6e7bf27f-36fb-41bf-91e0-5985cfefadee](https://github.com/user-attachments/assets/73f99038-8b53-4c7f-9433-e83d7b8e42d7)
+
 
 ## 💬 Discussion
 
