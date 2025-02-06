@@ -1,60 +1,52 @@
-# Counteracting Misinformation by AI Using Deepfake Detection Algorithms
+Counteracting Misinformation by AI Using Deepfake Detection Algorithms 🤖🔍
+Team
+👤 Jash Dharia
+👤 Austin Rodrigues
+👤 Abhishek Shinde
+👤 Amol Borkar
 
-## Team
-- [Jash Dharia](https://github.com/JashDharia)
-- [Austin Rodrigues](https://github.com/austin-rodrigues)
-- [Abhishek Shinde](https://github.com/Abhishek1897)
-- [Amol Borkar](https://github.com/amolbrkr)
+Introduction 🚀
+Recent advancements in Generative AI have enabled the widespread creation of Deepfake images and videos (using tools like FaceSwap) that can easily circulate on social media. This technology poses risks as malicious actors can impersonate others and harm reputations. 😈👥
 
-## Introduction
-Recent advancements in Generative AI have allowed widespread creation (with tools such as FaceSwap) of Deepfake images and videos that circulate on Social Media. This makes it easy for nefarious agents to use GenAI to impersonate people or cause harm to one's reputation.
+Our model 🧠 can be integrated into content moderation systems to identify whether an image uploaded by a user is a deepfake or not. Our primary stakeholders include:
 
-Our model can be used as part of a content moderation pipeline to identify if an image uploaded by the user is a deepfake or not. Our primary stakeholders include:
+Social Media Platforms 📱 (Content Moderation)
+Law Enforcement 👮‍♂️
+We followed a conventional deep-learning approach and developed a model from scratch that achieved 84.6% test accuracy. 🎯
 
-- Social Media Platforms (Content Moderation)
-- Law Enforcement
+Literature Review 📚
+In our research, Convolutional Neural Networks (CNNs) emerged as the top method for deepfake detection. Several papers combined CNNs with techniques like attention maps 👁️ and frequency extractors to improve classification. CNNs are excellent at learning image features and perform well with limited data. 📈
 
-We pursued a conventional deep-learning approach and developed a model from scratch that achieved 84.6% test accuracy.
+Since our primary stakeholders are Social Media Platforms, we aimed to create a model with:
 
-## Literature Review
-In our research, Convolutional Neural Networks (CNNs) emerged as the preferred method for deepfake detection. Various research papers combined CNNs with techniques like attention maps, frequency extractors, etc., for classification. CNNs excel in learning features from images and perform well with limited data.
+Excellent inference speeds ⚡ for scalable classification of millions of user-generated images
+Explainability 📊 for classification results
+Data and Methods 📊
+Data
+We worked primarily with image data 🖼️ and utilized publicly available datasets for deepfake detection:
 
-Considering our primary stakeholders are Social Media Platforms, we aimed for a model with excellent inference speeds for scalable classification of millions of user-generated content uploaded daily. Additionally, the model should provide explanations for classifications.
+Diverse Fake Face Dataset (msu.edu)
+OpenForensics: In-The-Wild Dataset [V.1.0.0]
+Given limited computing resources 💻, we created a custom dataset from DFFD consisting of:
 
-## Data and Methods
-### Data
-We primarily worked with image data and utilized publicly available datasets used in deepfake detection research:
+10K real images 🖼️
+6.9K deepfakes 🔴
+Methods
+Preprocessing involved:
+Face detection using a pre-trained model 👀
+Center-cropping images to 256x256 resolution 🖼️
+Normalization of image data
+We experimented with various CNN architectures (AlexNet, LeNet, ResNet), training them for 40 epochs ⏳ with a batch size of 75 on 16K images.
 
-- Diverse Fake Face Dataset (msu.edu)
-- OpenForensics: In-The-Wild Dataset [V.1.0.0]
+Results 📈
+AlexNet achieved the highest performance:
 
-Due to limited computing resources, we built a dataset from DFFD, consisting of 10K real images and 6.9K deepfakes.
+98% training accuracy 🎯
+84.6% test accuracy ✅
+LeNet achieved 81% test accuracy.
 
-### Methods
-- Preprocessing involved:
-  - Face detection using a pre-trained model
-  - Center cropping the image around the face to 256x256 resolution
-  - Normalization
+Surprisingly, ResNet performed poorly with 46% accuracy despite having the highest parameter count, likely due to insufficient training data and epochs. 🤷‍♂️
 
-We experimented with various CNN architectures including AlexNet, LeNet, and ResNet, training them for 40 epochs with a batch size of 75 on 16K images.
-
-### Results
-- AlexNet achieved the highest performance with 98% training accuracy and 84.6% test accuracy.
-- LeNet followed with a test accuracy of 81%.
-- Surprisingly, ResNet with the highest parameter count performed poorly with only 46% accuracy, possibly due to insufficient training data and epochs.
-
-## Discussion
-It's crucial for the model to learn deepfake artifacts rather than image features. Models often excel for one technique but fail to generalize to others. While our models serve as an early-stage filter for content moderation, testing on in-the-wild samples from Social Media platforms is necessary.
-
-## Limitations
-- Test accuracy reached 84.6%, suggesting room for improvement.
-- The model handles only one image size (256x256).
-- Generalization ability is uncertain.
-- Lack of indication/explanation for why an image is classified as a deepfake.
-
-## Future Work
-- Explore augmentation techniques to improve model performance and provide explanations.
-- Implement attention maps to highlight forged image parts and enhance model understanding.
-- Develop a diverse test set with various deepfake generation techniques for better generalization evaluation.
-
+Discussion 💬
+It's essential for the model to learn deepfake artifacts 🔍 rather than just generic image features. While our models serve as a first-stage filter for content moderation, further testing on real-world data from social media platforms is required to improve their generalizability. 🌐
 
