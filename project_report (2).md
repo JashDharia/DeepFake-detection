@@ -57,11 +57,4 @@ It's crucial for the model to learn deepfake artifacts rather than image feature
 - Implement attention maps to highlight forged image parts and enhance model understanding.
 - Develop a diverse test set with various deepfake generation techniques for better generalization evaluation.
 
-UI:
-![alt text](<WhatsApp Image 2024-05-07 at 23.26.40_5c0f0577.jpg>)
 
-![alt text](<WhatsApp Image 2024-05-07 at 23.26.43_fd24c8c0.jpg>)
-
-![alt text](<WhatsApp Image 2024-05-07 at 23.26.46_3021f3e6.jpg>)
-
-![alt text](<WhatsApp Image 2024-05-07 at 23.26.49_a6e94506.jpg>)
